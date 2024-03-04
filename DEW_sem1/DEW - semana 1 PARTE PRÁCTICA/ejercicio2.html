@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio2</title>
+</head>
+<body>
+
+<script>
+
+    /*
+    
+    Ingresa 3 notas desde un prompt. Luego, muestra el promedio de dichas notas utilizando alert.
+    
+    let nota1 = prompt("Ingresa la primera nota:");
+    let nota2 = prompt("Ingresa la segunda nota:");
+    let nota3 = prompt("Ingresa la tercera nota:");
+
+    let promedioNotas = (nota1 + nota2 + nota3)/3;
+
+    alert("El promedio de las notas ingresadas es: " + promedioNotas);
+
+
+    //En un principio no funciona porque prompt es una caja de TEXTO, necesitamos números para sacar promedio.
+    //Para pasar esos textos a DECIMALES usamos parseFloat
+
+    */
+
+    let nota1 = parseFloat(prompt("Ingresa la primera nota:"));
+    let nota2 = parseFloat(prompt("Ingresa la segunda nota:"));
+    let nota3 = parseFloat(prompt("Ingresa la tercera nota:"));
+
+    let promedioNotas = (nota1 + nota2 + nota3)/3;
+
+    alert("El promedio de las notas ingresadas es: " + promedioNotas);
+
+</script>
+    
+</body>
+</html>

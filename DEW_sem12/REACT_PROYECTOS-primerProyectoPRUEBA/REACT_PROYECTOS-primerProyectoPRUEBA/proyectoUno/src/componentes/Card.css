@@ -1,0 +1,9 @@
+.cajaTarjeta{
+    width: 300px;
+    border-radius: 20px;
+    background-color: bisque;
+    padding: 20px;
+    text-align: center;
+    border: 2px solid gray;
+    margin: 10px;
+}

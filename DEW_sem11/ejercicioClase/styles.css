@@ -1,0 +1,28 @@
+/*Estilos CSS*/
+h1{
+	text-align: center;
+	font-family: Verdana;
+	font-size: 30px;
+}
+
+.elementoReact{
+	border:2px solid gray;
+	padding: 20px;
+	border-radius: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 250px;
+	margin: auto;
+    margin-bottom: 10px;
+}
+
+.elementoReact img{
+	margin-right: 20px;
+	width: 80px;
+}
+
+.elementoReact span{
+	font-family: Arial;
+	font-weight: bold;
+}

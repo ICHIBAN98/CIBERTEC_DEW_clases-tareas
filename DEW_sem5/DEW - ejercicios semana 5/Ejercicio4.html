@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio4</title>
+    <link rel="stylesheet" href="/Ejercicio4.css">
+</head>
+<body>
+    <h1>Reloj Digital</h1>
+    <p id="reloj">00:00:00</p>
+
+    <script>
+        function obtenerTiempo(){
+        //Objeto Fecha
+        let horaSistema = new Date();
+        //Obtener horas, minutos y segundos del Objeto Fecha
+        let hh = String(horaSistema.getHours()).padStart(2,"0");
+        let mm = String(horaSistema.getMinutes()).padStart(2,"0");
+        let ss = String(horaSistema.getSeconds()).padStart(2,"0");
+
+        let tiempoActual = hh+":"+mm+":"+ss;
+        //Acceder al elemento en HTML
+        let tiempo = document.getElementById("reloj");
+        tiempo.innerHTML=tiempoActual;
+    }
+
+    //Para que la hora se actualice cada segundo
+    setInterval(obtenerTiempo,1000);
+    </script>
+
+</body>
+</html>

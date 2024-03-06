@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>caso 1</title>
+  </head>
+  <body>
+    <script>
+      //Declarar un Arreglo
+      let ciudades = [
+        "Lima",
+        "Ica",
+        "Arequipa",
+        "Cusco",
+        "Cajamarca",
+        "Iquitos",
+      ];
+
+      //Recorrer un Arreglo
+      for (let ciudad of ciudades) {
+        //Crear la etiqueta h2 y almacenarla en una variable.
+        let encabezado2 = document.createElement("h2");
+
+        //Insertar contenido al elemento h2 o encabezado2
+        encabezado2.innerHTML = ciudad;
+
+        //Agregar el elemento HIJO al PADRE
+        document.body.appendChild(encabezado2);
+      }
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caso3</title>
+</head>
+<body>
+    <script>
+
+        //PRIMERA FORMA
+        /* 
+
+        let sueldos = [];
+        let acumulador = 0;
+
+        do{
+            entrada = parseFloat(prompt("Ingresa sueldo en soles(Ingresar 0 para finalizar):"));
+            sueldos.push(entrada);
+            acumulador+=entrada;
+            
+        }while(entrada!=0);
+
+        document.write("Suma total de sueldos: S/." + acumulador);
+
+        */
+
+        //SEGUNDA FORMA
+
+        let sueldos = [];
+        let acumulador = 0;
+
+        do{
+            entrada = parseFloat(prompt("Ingresa sueldo en soles(Ingresar 0 para finalizar):"));
+            sueldos.push(entrada);
+        }while(entrada!=0);
+
+        for(let sueldo of sueldos){
+            acumulador+=sueldo;
+        }
+
+        document.write("Suma total de sueldos: S/." + acumulador);
+    </script>
+</body>
+</html>

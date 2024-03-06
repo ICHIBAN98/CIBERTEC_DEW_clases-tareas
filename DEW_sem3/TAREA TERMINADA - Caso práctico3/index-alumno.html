@@ -1,0 +1,172 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<title>Striped by HTML5 UP</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/skel.min.js"></script>
+	<script src="js/skel-layers.min.js"></script>
+	<script src="js/init.js"></script>
+	<noscript>
+		<link rel="stylesheet" href="css/skel.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/style-desktop.css" />
+		<link rel="stylesheet" href="css/style-wide.css" />
+	</noscript>
+
+</head>
+
+<body class="left-sidebar">
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Content -->
+		<div id="content">
+			<div class="inner">
+
+				<!-- Post -->
+				<article class="box post post-excerpt">
+					<header>
+
+						<!--Pregunta 03 - Insertar la Fecha Actual - Objeto DATE-->
+
+						<p id="fecha"></p>
+							
+						<!-- =================================================== -->
+						<h2><a href="#">Welcome to Striped</a></h2>
+						<p>A free, fully responsive HTML5 site template by HTML5 UP</p>
+					</header>
+
+					<!--Pregunta 01 - Carrussel de Imágenes-->
+
+					<a>
+						<img id="carruselImagen" src="images/foto1.jpg" alt="" />
+					</a>
+
+					<!-- =================================================== -->
+					<p>
+						<strong>Hello!</strong> You're looking at <strong>Striped</strong>, a fully responsive HTML5
+						site template designed by <a href="http://n33.co">AJ</a>
+						for <a href="http://html5up.net">HTML5 UP</a> It features a clean, minimalistic design, styling
+						for all basic page elements (including blockquotes, tables and lists), a
+						repositionable sidebar (left or right), and HTML5/CSS3 code designed for quick and easy
+						customization (see code comments for details).
+					</p>
+					<p>
+						Striped is released for free under the <a href="http://html5up.net/license">Creative Commons
+							Attribution license</a> so feel free to use it for personal projects
+						or even commercial ones &ndash; just be sure to credit <a href="http://html5up.net">HTML5 UP</a>
+						for the design. If you like what you see here, be sure to check out
+						<a href="http://html5up.net">HTML5 UP</a> for more cool designs or follow me on <a
+							href="http://twitter.com/n33co">Twitter</a> for new releases and updates.
+					</p>
+				</article>
+
+				<!-- Post -->
+				<article class="box post post-excerpt">
+					<header>
+						<!--Pregunta 02 - Vista Principal-->
+
+						<h2 id="texto">Imagen 01</h2>
+
+						<img id="imagenGrande" src="images/pelicula1.jpg">
+						<br>
+						<hr>
+
+						<!--miniaturas-->
+
+						<img onclick="cambio1()" src="images/pelicula1.jpg" width="100">
+
+						<img onclick="cambio2()" src="images/pelicula2.jpg" width="100">
+
+						<img onclick="cambio3()" src="images/pelicula3.jpg" width="100">
+
+						<!-- =================================================== -->
+
+
+						<!-- Copyright -->
+						<ul id="copyright">
+							<li>&copy; Untitled.</li>
+							<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+
+			</div>
+
+		</div>
+
+		<script>
+
+			let imagen = document.getElementById("imagenGrande");
+			let texto = document.getElementById("texto");
+
+			function cambio1() {
+
+				texto.innerHTML = "Imagen 01"
+				imagen.src = "images/pelicula1.jpg";
+
+			}
+			function cambio2() {
+				
+				texto.innerHTML = "Imagen 02"
+				imagen.src = "images/pelicula2.jpg";
+
+			}
+			function cambio3() {
+
+				texto.innerHTML = "Imagen 03"
+				imagen.src = "images/pelicula3.jpg";
+
+			}
+
+			let nombreMes = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+
+			let dSemana = ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"];
+
+			let fechaActual = new Date();
+
+			let mes = fechaActual.getMonth();
+
+			let anio = fechaActual.getFullYear();
+
+			let dia = fechaActual.getDay();
+
+			let diaMes = fechaActual.getDate();
+
+			let fechaActualizable = (dSemana[dia] + ", " + diaMes + " de " + nombreMes[mes] + " de " + anio);
+
+			let fecha = document.getElementById("fecha");
+
+			fecha.innerHTML = fechaActualizable;
+
+
+
+
+			//---------------------------------------------------------
+			//CARRUSEL
+
+			let carrusel = ["images/foto1.jpg","images/foto2.jpg","images/foto3.jpg","images/foto4.jpg","images/foto5.jpg"];
+			let indiceCarrusel = 0;
+
+			function cambiarImagen(){
+				let imagen = document.getElementById("carruselImagen");
+				imagen.src = carrusel[indiceCarrusel];
+				if(indiceCarrusel<4){
+					indiceCarrusel++;
+				} else {
+					indiceCarrusel = 0;
+				}
+			}
+
+			setInterval(cambiarImagen,3000);
+
+
+		</script>
+
+</body>
+</html>

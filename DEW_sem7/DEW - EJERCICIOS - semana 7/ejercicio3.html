@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Caso3</title>
+  </head>
+  <body>
+    <script>
+      let productos = ["jabon", "legia", "copas", "platos", "shampoo"];
+
+      let seleccion = document.createElement("select");
+
+      let contenidoSelect = "";
+
+      for (let producto of productos) {
+        contenidoSelect += `<option>${producto}</option>`;
+      }
+
+      seleccion.innerHTML = contenidoSelect;
+
+      document.body.appendChild(seleccion);
+    </script>
+  </body>
+</html>

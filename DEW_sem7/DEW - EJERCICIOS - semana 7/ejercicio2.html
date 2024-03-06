@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Caso2</title>
+  </head>
+  <body>
+    <script>
+      //Crear el Arreglo vacio
+      let tareas = [];
+
+      //Solicitar al usuario 5 tareas
+      for (let i = 0; i < 5; i++) {
+        tareas.push(prompt("Ingrese una Tarea"));
+      }
+
+      //Crear una etiqueta UL
+      let listaPadre = document.createElement("ul");
+      let contenidoLista = "";
+
+      for (let tarea of tareas) {
+        //<li>Desarrollar las Actividades S7</li>
+        contenidoLista += "<li>" + tarea + "</li>";
+      }
+      listaPadre.innerHTML = contenidoLista;
+      document.body.appendChild(listaPadre);
+
+
+      /*
+      OTRA FORMA DE RESOLVERLO, MEDIANTE PLANTILLA
+
+      for (let tarea of tareas) {
+        //<li>Desarrollar las Actividades S7</li>
+
+        //contenidoLista+='<li>'+tarea+'</li>'; ALT+96 ``
+
+        contenidoLista += `<li>${tarea}</li>`;
+      }
+
+      listaPadre.innerHTML = contenidoLista;
+
+      document.body.appendChild(listaPadre);
+      */
+    </script>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caso2</title>
+</head>
+<body>
+
+    <script>
+        let entrada = prompt("Nombre de alumno:");
+        //Declara un arreglo vacío
+        let alumnos = [];
+
+        //Cargar el arreglo de manera dinámica (prompt) y consecutiva (usaremos la estructura repetitiva WHILE)
+        while(entrada != "ESC"){
+            alumnos.push(entrada);
+            entrada = prompt("Nombre de alumno:");
+        }
+
+        //Recorrer el arreglo finalizado para mostrarlo
+        for(let alumno of alumnos){
+            document.write(alumno + "<br>");
+        }
+    </script>
+    
+</body>
+</html>

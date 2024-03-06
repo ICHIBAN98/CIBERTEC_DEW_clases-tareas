@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pregunta 03 - DEW</title>
+	<meta charset="utf-8">
+	<script src="./pregunta03.js"></script>
+</head>
+<body>
+	<script>
+		let arregloNotas = [];
+		let notaIn = parseFloat(prompt("Ingrese nota del alumno:" + "\n" + "Ingresar 0 para finalizar."));
+
+		while (notaIn!=0){
+			arregloNotas.push(notaIn);
+			notaIn = parseFloat(prompt("Ingrese nota del alumno:" + "\n" + "Ingresar 0 para finalizar."));
+		}
+
+		let cantidadNotas = parseFloat(arregloNotas.length);
+
+		let suma = 0;
+		for(let nota of arregloNotas){
+			suma+=nota;
+			document.write("nota: " + nota + "<br>");
+		}
+		sumaFloat=parseFloat(suma);
+
+		let promedio = sumaFloat/cantidadNotas;
+
+		document.write("Promedio de notas: " + promedio);
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+	*{font-family: arial;}
+
+	#contenedor{
+		width: 600px;
+		height: auto;
+		margin: 0 auto;
+		padding: 0 50px;
+		
+		box-sizing: border-box;
+	}
+	.vista{
+		border:2px solid #FF0000;
+		box-sizing: border-box;
+		width: 500px;
+		overflow: hidden;
+		margin-bottom: 20px;
+	}
+	.f1{
+		width: 150px;
+		height: auto;
+		float: left;
+		margin-right: 14px;
+		border:2px solid #FF0000;
+	}
+		.f2{
+		width: 150px;
+		height: auto;
+		float: left;
+		margin-right: 14px;
+		border:2px solid #FF0000;
+	}
+		.f3{
+		width: 150px;
+		height: auto;
+		float: left;
+		margin-right: 10px;
+		border:2px solid #FF0000;
+	}

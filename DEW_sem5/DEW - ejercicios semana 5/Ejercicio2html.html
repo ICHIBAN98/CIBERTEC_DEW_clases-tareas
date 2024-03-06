@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio2</title>
+</head>
+<body>
+<input type="number" id="tiempoElegido">
+<button onclick="comenzarTiempo()">Alarma</button>
+    <script>
+        //Acceder a los elementos HTML que vamos a modificar desde JS.
+        //Tomamos el tiempo elegido desde HTML y lo transferimos a una variable.
+        let tiempoSegundos = document.getElementById("tiempoElegido");
+        //Al presionar el botón ALARMA, mostrar un ALERT luego de 3 segundos.
+        function comenzarTiempo(){
+            setTimeout(tiempoCumplido,1000*tiempoSegundos.value);
+        }
+        //El .value sirve para capturar la información que está dentro de la caja (.value sirve con números, strings tmbn).
+        function tiempoCumplido(){
+            alert("Se acabó el tiempo!!!");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pregunta 04 - DEW</title>
+	<meta charset="utf-8">
+
+	<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+<div id="contenedor">
+	
+	<!--Datos para Modificar-->
+
+	<h2>Zapatillas - Hombre Running</h2>
+	<p id="textoModificable">Vista Principal</p>
+	
+	
+	<!--Vista Principal-->
+	<div class="vista">
+		<img id="imagenModificable" src="images/vistaG1.jpg">		
+	</div>
+
+	
+
+
+	<!--Miniaturas-->
+	
+	<div class="f1">
+		<img onclick="cambioImg1()" src="images/vistaP1.jpg">		
+	</div>
+	
+	<div class="f2">
+		<img onclick="cambioImg2()" src="images/vistaP2.jpg">
+	</div>
+	
+	<div class="f3">
+		<img onclick="cambioImg3()" src="images/vistaP3.jpg">
+	</div>
+
+
+
+<!--Área para el código de Javascript-->
+	<script>
+
+		function cambioImg1() {
+			let texto = document.getElementById("textoModificable");
+			texto.innerHTML = "Vista Principal";
+			let miniatura = document.getElementById("imagenModificable");
+			miniatura.src = "images/vistaG1.jpg";
+		}
+
+		function cambioImg2() {
+			let texto = document.getElementById("textoModificable");
+			texto.innerHTML = "Vista Lateral";
+			let miniatura = document.getElementById("imagenModificable");
+			miniatura.src = "images/vistaG2.jpg";
+		}
+
+		function cambioImg3() {
+			let texto = document.getElementById("textoModificable");
+			texto.innerHTML = "Vista Inferior";
+			let miniatura = document.getElementById("imagenModificable");
+			miniatura.src = "images/vistaG3.jpg";
+		}
+
+	</script>
+
+</div>
+</body>
+</html>

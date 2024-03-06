@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caso2</title>
+    <style>
+
+		*{font-family: arial;}
+
+	</style>
+</head>
+<body>
+    
+    <script>
+        //Arreglos
+        let semana = ["Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado","Domingo"];
+
+        //Objeto Fecha en JS
+        //Creamos un objeto predeterminado que tiene JS que sirve para obtener la FECHA DEL SISTEMA: "new Date();"
+        let fechaSistema = new Date();
+
+        //Capturar el año del sistema
+       let anio = fechaSistema.getFullYear();
+        //Capturar el día del mes
+        let diaMes = fechaSistema.getDate();
+        //Capturar el día de la semana
+        let dSemana = fechaSistema.getDay();
+
+        //Mostrar la fecha del Sistema
+        document.write(fechaSistema + "<hr>");
+        document.write("Año: " + anio + "<hr>");
+        document.write("Día del mes: " + diaMes + "<hr>");
+        document.write("Día de la semana: " + semana[dSemana] + "<hr>");
+
+        //MOSTRAR LA FECHA EN UN FORMATO ESTABLECIDO
+        //Martes, 5 de Setiembre de 2023
+        //5/Set/2023
+
+        document.write(semana[dSemana] + ", " + diaMes + " de " + anio);
+
+    </script>
+
+</body>
+</html>

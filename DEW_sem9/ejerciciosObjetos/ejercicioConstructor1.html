@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EjercicioConstructor1</title>
+</head>
+<body>
+    <script>
+        //Creamos el constructor
+        function car(marca,modelo,anio,color,precioDolares){
+            this.marca=marca;
+            this.modelo=modelo;
+            this.anio=anio;
+            this.color=color;
+            this.precioDolares=precioDolares;
+        }
+
+        //Instanciamos(creamos) objetos haciendo uso del constructor
+        var car1 = new car("Nissan","Versa",1992,"rojo",20000);
+		var car2 = new car("Mazda","gtx3",2020,"azul",26000);
+        var car3 = new car("Toyota","rav4",2022,"blanco",32000);
+        var car4 = new car("Toyota","corolla",2020,"negro",22000);
+        var car5 = new car("Ford","explorer",2023,"plata",55000);
+        var car6 = new car("Kia","rio",2023,"gris",14000);
+
+		console.log(car1,car2,car3,car4,car5,car6);
+    </script>
+</body>
+</html>

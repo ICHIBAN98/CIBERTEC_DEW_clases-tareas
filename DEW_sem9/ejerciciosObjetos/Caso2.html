@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caso2</title>
+</head>
+<body>
+    <script>
+
+        //Crear un Arreglo de Objetos
+        let autos = [
+            {
+                marca:"Toyota",
+                modelo:"Yaris",
+                color:"gris",
+                anio:2023,
+                precioDolares:20000,
+                soat:false,
+            },
+            {
+                marca:"Nissan",
+                modelo:"Versa",
+                color:"rojo",
+                anio:2020,
+                precioDolares:15000,
+                soat:true,
+            },
+            {
+                marca:'Kia',
+			    modelo:'Cerato',
+			    color:'Negro',
+			    anio:2022,
+		    	precioDolares:18000,
+		    	soat:true,
+            },
+            {
+                marca:'Hyundai',
+			    modelo:'Sonet',
+			    color:'Blanco',
+			    anio:2024,
+		    	precioDolares:25000,
+		    	soat:false,
+            }
+        ];
+      
+        //Mostrar datos del arreglo en consola
+        console.log(autos[0].marca,autos[1].marca,autos[2].marca);
+        for(auto of autos){
+            console.log(auto.marca);
+        }
+        for(let i=0; i<autos.length;i++){
+            console.log(autos[i].marca);
+        }
+        //Mostrar datos del arreglo pero en el documento
+        for(let i=0; i<autos.length;i++){
+            document.write(autos[i].marca + "<br>");
+            document.write(autos[i].modelo + "<br>");
+            document.write("USD $" + autos[i].precioDolares+ "<hr>");
+        }
+        
+        
+    </script>
+</body>
+</html>
